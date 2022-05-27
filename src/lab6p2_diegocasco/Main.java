@@ -85,6 +85,21 @@ public class Main extends javax.swing.JFrame {
         Jt_probexito = new javax.swing.JTextField();
         Jb_GuardarJuego = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
+        Menu_Juego = new javax.swing.JFrame();
+        jTabbedPane2 = new javax.swing.JTabbedPane();
+        jPanel7 = new javax.swing.JPanel();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
+        jScrollPane6 = new javax.swing.JScrollPane();
+        jTable2 = new javax.swing.JTable();
+        jButton1 = new javax.swing.JButton();
+        jPanel8 = new javax.swing.JPanel();
+        jPanel9 = new javax.swing.JPanel();
+        jPanel10 = new javax.swing.JPanel();
+        jLabel19 = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
+        jScrollPane7 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         JT_usuario = new javax.swing.JTextField();
@@ -497,6 +512,143 @@ public class Main extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane5.setViewportView(jTable1);
+
+        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane6.setViewportView(jTable2);
+
+        jButton1.setText("Comprar");
+
+        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
+        jPanel7.setLayout(jPanel7Layout);
+        jPanel7Layout.setHorizontalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 294, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 295, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 269, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(12, Short.MAX_VALUE))
+        );
+        jPanel7Layout.setVerticalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 323, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(21, Short.MAX_VALUE))
+        );
+
+        jTabbedPane2.addTab("Items", jPanel7);
+
+        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
+        jPanel8.setLayout(jPanel8Layout);
+        jPanel8Layout.setHorizontalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 625, Short.MAX_VALUE)
+        );
+        jPanel8Layout.setVerticalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 350, Short.MAX_VALUE)
+        );
+
+        jTabbedPane2.addTab("tab2", jPanel8);
+
+        javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
+        jPanel9.setLayout(jPanel9Layout);
+        jPanel9Layout.setHorizontalGroup(
+            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 625, Short.MAX_VALUE)
+        );
+        jPanel9Layout.setVerticalGroup(
+            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 350, Short.MAX_VALUE)
+        );
+
+        jTabbedPane2.addTab("tab3", jPanel9);
+
+        javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
+        jPanel10.setLayout(jPanel10Layout);
+        jPanel10Layout.setHorizontalGroup(
+            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 625, Short.MAX_VALUE)
+        );
+        jPanel10Layout.setVerticalGroup(
+            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 350, Short.MAX_VALUE)
+        );
+
+        jTabbedPane2.addTab("tab4", jPanel10);
+
+        jLabel19.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jLabel19.setText("Club Penguin");
+
+        jButton2.setText("Premium");
+
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jScrollPane7.setViewportView(jTextArea1);
+
+        javax.swing.GroupLayout Menu_JuegoLayout = new javax.swing.GroupLayout(Menu_Juego.getContentPane());
+        Menu_Juego.getContentPane().setLayout(Menu_JuegoLayout);
+        Menu_JuegoLayout.setHorizontalGroup(
+            Menu_JuegoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Menu_JuegoLayout.createSequentialGroup()
+                .addGap(248, 248, 248)
+                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(Menu_JuegoLayout.createSequentialGroup()
+                .addGap(35, 35, 35)
+                .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(Menu_JuegoLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jTabbedPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 625, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        Menu_JuegoLayout.setVerticalGroup(
+            Menu_JuegoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Menu_JuegoLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(Menu_JuegoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel19, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTabbedPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 383, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
@@ -575,8 +727,17 @@ public class Main extends javax.swing.JFrame {
                 Admin.pack();
                 Admin.setLocationRelativeTo(this);
                 Admin.setVisible(true);
-            }else if(JT_usuario.getText().equals(usuarios.get(i).getNombre())&&JT_password.equals(usuarios.get(i).getPassword())){
-                
+            }if(JT_usuario.getText().equals(usuarios.get(i).getNombre())&&JT_password.equals(usuarios.get(i).getPassword())){
+                Menu_Juego.pack();
+                Menu_Juego.setLocationRelativeTo(this);
+                Menu_Juego.setVisible(true);
+            }else{
+                String usuario=JT_usuario.getText();
+                String password=JT_password.getText();
+                usuarios.add(new Usuario(usuario, password,false, 1000));
+                Menu_Juego.pack();
+                Menu_Juego.setLocationRelativeTo(this);
+                Menu_Juego.setVisible(true);
             }
         }    
     }//GEN-LAST:event_jb_loginMouseClicked
@@ -609,10 +770,10 @@ public class Main extends javax.swing.JFrame {
                     CB_Items.getSelectedItem().toString(),
                     Integer.valueOf(JT_Precio.getText())
                 };   
-        DefaultTableModel modelo
+        DefaultTableModel items
                         = (DefaultTableModel) TB_Items.getModel();
-                modelo.addRow(newrow);
-                TB_Items.setModel(modelo);
+                items.addRow(newrow);
+                TB_Items.setModel(items);
         JT_Nombre.setText("");
         JT_Precio.setText("");
     }//GEN-LAST:event_JB_GuardarItemsMouseClicked
@@ -646,10 +807,10 @@ public class Main extends javax.swing.JFrame {
                     Integer.valueOf(Jt_X.getText()),
                     Integer.valueOf(Jt_Y.getText())
                 };   
-        DefaultTableModel modelo
+        DefaultTableModel casa
                         = (DefaultTableModel) TB_Casa.getModel();
-                modelo.addRow(newrow);
-                TB_Casa.setModel(modelo);
+                casa.addRow(newrow);
+                TB_Casa.setModel(casa);
         JT_NombreCasa.setText("");
         JT_size.setText("");
         JT_costo.setText("");
@@ -692,10 +853,10 @@ public class Main extends javax.swing.JFrame {
                     bt_color.getBackground(),
                     Integer.valueOf(JB_precioPuf.getText())
                 };   
-        DefaultTableModel modelo
+        DefaultTableModel puff
                         = (DefaultTableModel) TB_Puffles.getModel();
-                modelo.addRow(newrow);
-                TB_Puffles.setModel(modelo);
+                puff.addRow(newrow);
+                TB_Puffles.setModel(puff);
         JT_Nombrepuf.setText("");
         JB_precioPuf.setText("");
     }//GEN-LAST:event_JB_GuardarPMouseClicked
@@ -728,10 +889,10 @@ public class Main extends javax.swing.JFrame {
                     Integer.valueOf(JT_recompensasJuegos.getText()),
                     Integer.valueOf(Jt_probexito.getText())
                 };   
-        DefaultTableModel modelo
+        DefaultTableModel juego
                         = (DefaultTableModel) TB_Juegos.getModel();
-                modelo.addRow(newrow);
-                TB_Juegos.setModel(modelo);
+                juego.addRow(newrow);
+                TB_Juegos.setModel(juego);
         JT_nombreJuegos.setText("");
         JT_CostoJuegos.setText("");
         JT_recompensasJuegos.setText("");
@@ -795,11 +956,14 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JTextField Jt_X;
     private javax.swing.JTextField Jt_Y;
     private javax.swing.JTextField Jt_probexito;
+    private javax.swing.JFrame Menu_Juego;
     private javax.swing.JTable TB_Casa;
     private javax.swing.JTable TB_Items;
     private javax.swing.JTable TB_Juegos;
     private javax.swing.JTable TB_Puffles;
     private javax.swing.JButton bt_color;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -810,6 +974,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -819,16 +984,27 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel7;
+    private javax.swing.JPanel jPanel8;
+    private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
+    private javax.swing.JScrollPane jScrollPane6;
+    private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JTabbedPane jTabbedPane2;
+    private javax.swing.JTable jTable1;
+    private javax.swing.JTable jTable2;
+    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JButton jb_login;
     // End of variables declaration//GEN-END:variables
     ArrayList<Usuario> usuarios=new ArrayList();
