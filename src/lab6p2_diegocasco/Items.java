@@ -5,7 +5,6 @@
  */
 package lab6p2_diegocasco;
 
-import java.awt.Color;
 
 /**
  *
@@ -13,16 +12,16 @@ import java.awt.Color;
  */
 public class Items {
     private String nombre;
-    private String precio;
-    private Color color;
+    private int precio;
+    private String tipoitem;
 
     public Items() {
     }
 
-    public Items(String nombre, String precio, Color color) {
+    public Items(String nombre, int precio, String tipoitem) {
         this.nombre = nombre;
         this.precio = precio;
-        this.color = color;
+        this.tipoitem = tipoitem;
     }
 
     public String getNombre() {
@@ -33,26 +32,25 @@ public class Items {
         this.nombre = nombre;
     }
 
-    public String getPrecio() {
+    public int getPrecio() {
         return precio;
     }
 
-    public void setPrecio(String precio) {
+    public void setPrecio(int precio) {
         this.precio = precio;
     }
 
-    public Color getColor() {
-        return color;
+    public String getTipoitem() {
+        return tipoitem;
     }
 
-    public void setColor(Color color) {
-        this.color = color;
+    public void setTipoitem(String tipoitem) {
+        this.tipoitem = tipoitem;
     }
 
     @Override
     public String toString() {
-        return "Items{" + "nombre=" + nombre + ", precio=" + precio + ", color=" + color + '}';
+        return "Items{" + "nombre=" + nombre + ", precio=" + precio + ", tipoitem=" + tipoitem + '}';
     }
-    
     
 }
