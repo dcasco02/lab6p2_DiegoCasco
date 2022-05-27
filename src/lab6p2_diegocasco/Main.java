@@ -5,8 +5,10 @@
  */
 package lab6p2_diegocasco;
 
+import java.awt.Color;
 import java.util.ArrayList;
 import java.util.Date;
+import javax.swing.JColorChooser;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -66,7 +68,7 @@ public class Main extends javax.swing.JFrame {
         JT_Nombrepuf = new javax.swing.JTextField();
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
-        jButton3 = new javax.swing.JButton();
+        bt_color = new javax.swing.JButton();
         jLabel14 = new javax.swing.JLabel();
         JB_precioPuf = new javax.swing.JTextField();
         JB_GuardarP = new javax.swing.JButton();
@@ -74,14 +76,14 @@ public class Main extends javax.swing.JFrame {
         jScrollPane4 = new javax.swing.JScrollPane();
         TB_Juegos = new javax.swing.JTable();
         jLabel15 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        JT_nombreJuegos = new javax.swing.JTextField();
         jLabel16 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
+        JT_CostoJuegos = new javax.swing.JTextField();
         jLabel17 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
+        JT_recompensasJuegos = new javax.swing.JTextField();
         jLabel18 = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
-        jButton4 = new javax.swing.JButton();
+        Jt_probexito = new javax.swing.JTextField();
+        Jb_GuardarJuego = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -301,9 +303,9 @@ public class Main extends javax.swing.JFrame {
 
         jLabel13.setText("Color");
 
-        jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
+        bt_color.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton3MouseClicked(evt);
+                bt_colorMouseClicked(evt);
             }
         });
 
@@ -327,7 +329,7 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addGap(6, 6, 6)
-                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(bt_color, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(24, Short.MAX_VALUE))
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -352,7 +354,7 @@ public class Main extends javax.swing.JFrame {
                 .addGap(31, 31, 31)
                 .addComponent(jLabel13)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(bt_color, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -397,7 +399,12 @@ public class Main extends javax.swing.JFrame {
 
         jLabel18.setText("Probabilidad de Exito");
 
-        jButton4.setText("Guardar");
+        Jb_GuardarJuego.setText("Guardar");
+        Jb_GuardarJuego.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Jb_GuardarJuegoMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -409,14 +416,14 @@ public class Main extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField2)
+                    .addComponent(JT_nombreJuegos)
                     .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField3)
+                    .addComponent(JT_CostoJuegos)
                     .addComponent(jLabel17)
-                    .addComponent(jTextField4)
+                    .addComponent(JT_recompensasJuegos)
                     .addComponent(jLabel18)
-                    .addComponent(jTextField5)
-                    .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, 235, Short.MAX_VALUE))
+                    .addComponent(Jt_probexito)
+                    .addComponent(Jb_GuardarJuego, javax.swing.GroupLayout.DEFAULT_SIZE, 235, Short.MAX_VALUE))
                 .addContainerGap(19, Short.MAX_VALUE))
         );
         jPanel6Layout.setVerticalGroup(
@@ -428,21 +435,21 @@ public class Main extends javax.swing.JFrame {
                     .addGroup(jPanel6Layout.createSequentialGroup()
                         .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(JT_nombreJuegos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jLabel16)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(JT_CostoJuegos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(24, 24, 24)
                         .addComponent(jLabel17)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(JT_recompensasJuegos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jLabel18)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(Jt_probexito, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(Jb_GuardarJuego, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(10, Short.MAX_VALUE))
         );
 
@@ -650,13 +657,86 @@ public class Main extends javax.swing.JFrame {
         Jt_Y.setText("");
     }//GEN-LAST:event_GuardarCasaMouseClicked
 
-    private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
-        
-    }//GEN-LAST:event_jButton3MouseClicked
+    private void bt_colorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_colorMouseClicked
+    bt_color.setBackground(
+                JColorChooser.showDialog(
+                        this, "Seleccione un color", 
+                        Color.yellow)
+        );
+    }//GEN-LAST:event_bt_colorMouseClicked
 
     private void JB_GuardarPMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JB_GuardarPMouseClicked
-        // TODO add your handling code here:
+        TB_Puffles.setModel(new javax.swing.table.DefaultTableModel(
+                new Object[][]{},
+                new String[]{
+                    "Nombre", "Color", "Precio"
+                }
+        ) {
+            Class[] types = new Class[]{
+                java.lang.String.class, java.lang.Object.class, java.lang.Integer.class
+            };
+            boolean[] canEdit = new boolean[]{
+                false, false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types[columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit[columnIndex];
+            }
+        });
+        Object[] newrow = {
+                    JT_Nombrepuf.getText(),
+                    bt_color.getBackground(),
+                    Integer.valueOf(JB_precioPuf.getText())
+                };   
+        DefaultTableModel modelo
+                        = (DefaultTableModel) TB_Puffles.getModel();
+                modelo.addRow(newrow);
+                TB_Puffles.setModel(modelo);
+        JT_Nombrepuf.setText("");
+        JB_precioPuf.setText("");
     }//GEN-LAST:event_JB_GuardarPMouseClicked
+
+    private void Jb_GuardarJuegoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Jb_GuardarJuegoMouseClicked
+        TB_Juegos.setModel(new javax.swing.table.DefaultTableModel(
+                new Object[][]{},
+                new String[]{
+                    "Nombre", "Costo ", "Recompensa", "Porcentaje"
+                }
+        ) {
+            Class[] types = new Class[]{
+                java.lang.String.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.String.class
+            };
+            boolean[] canEdit = new boolean[]{
+                false, false, false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types[columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit[columnIndex];
+            }
+        });
+        Object[] newrow = {
+                    JT_nombreJuegos.getText(),
+                    Integer.valueOf(JT_CostoJuegos.getText()),
+                    Integer.valueOf(JT_recompensasJuegos.getText()),
+                    Integer.valueOf(Jt_probexito.getText())
+                };   
+        DefaultTableModel modelo
+                        = (DefaultTableModel) TB_Juegos.getModel();
+                modelo.addRow(newrow);
+                TB_Juegos.setModel(modelo);
+        JT_nombreJuegos.setText("");
+        JT_CostoJuegos.setText("");
+        JT_recompensasJuegos.setText("");
+        Jt_probexito.setText("");
+    }//GEN-LAST:event_Jb_GuardarJuegoMouseClicked
 
     /**
      * @param args the command line arguments
@@ -700,22 +780,26 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JButton JB_GuardarItems;
     private javax.swing.JButton JB_GuardarP;
     private javax.swing.JTextField JB_precioPuf;
+    private javax.swing.JTextField JT_CostoJuegos;
     private javax.swing.JTextField JT_Nombre;
     private javax.swing.JTextField JT_NombreCasa;
     private javax.swing.JTextField JT_Nombrepuf;
     private javax.swing.JTextField JT_Precio;
     private javax.swing.JTextField JT_costo;
+    private javax.swing.JTextField JT_nombreJuegos;
     private javax.swing.JPasswordField JT_password;
+    private javax.swing.JTextField JT_recompensasJuegos;
     private javax.swing.JTextField JT_size;
     private javax.swing.JTextField JT_usuario;
+    private javax.swing.JButton Jb_GuardarJuego;
     private javax.swing.JTextField Jt_X;
     private javax.swing.JTextField Jt_Y;
+    private javax.swing.JTextField Jt_probexito;
     private javax.swing.JTable TB_Casa;
     private javax.swing.JTable TB_Items;
     private javax.swing.JTable TB_Juegos;
     private javax.swing.JTable TB_Puffles;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
+    private javax.swing.JButton bt_color;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -745,10 +829,6 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
     private javax.swing.JButton jb_login;
     // End of variables declaration//GEN-END:variables
     ArrayList<Usuario> usuarios=new ArrayList();
