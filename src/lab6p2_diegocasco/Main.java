@@ -6,6 +6,8 @@
 package lab6p2_diegocasco;
 
 import java.util.ArrayList;
+import java.util.Date;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -37,16 +39,16 @@ public class Main extends javax.swing.JFrame {
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel3 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        TB_Items = new javax.swing.JTable();
         JT_Nombre = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         JT_Precio = new javax.swing.JTextField();
         CB_Items = new javax.swing.JComboBox<>();
-        jButton1 = new javax.swing.JButton();
+        JB_GuardarItems = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTable2 = new javax.swing.JTable();
+        TB_Casa = new javax.swing.JTable();
         JT_NombreCasa = new javax.swing.JTextField();
         JT_size = new javax.swing.JTextField();
         JT_costo = new javax.swing.JTextField();
@@ -54,13 +56,13 @@ public class Main extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         Jt_Y = new javax.swing.JTextField();
-        jButton2 = new javax.swing.JButton();
+        GuardarCasa = new javax.swing.JButton();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
         jScrollPane3 = new javax.swing.JScrollPane();
-        jTable3 = new javax.swing.JTable();
+        TB_Puffles = new javax.swing.JTable();
         JT_Nombrepuf = new javax.swing.JTextField();
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
@@ -70,7 +72,7 @@ public class Main extends javax.swing.JFrame {
         JB_GuardarP = new javax.swing.JButton();
         jPanel6 = new javax.swing.JPanel();
         jScrollPane4 = new javax.swing.JScrollPane();
-        jTable4 = new javax.swing.JTable();
+        TB_Juegos = new javax.swing.JTable();
         jLabel15 = new javax.swing.JLabel();
         jTextField2 = new javax.swing.JTextField();
         jLabel16 = new javax.swing.JLabel();
@@ -89,7 +91,7 @@ public class Main extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jb_login = new javax.swing.JButton();
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        TB_Items.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
                 {null, null, null},
@@ -108,15 +110,22 @@ public class Main extends javax.swing.JFrame {
                 return types [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(TB_Items);
 
         jLabel5.setText("Nombre");
 
         jLabel6.setText("Precio");
 
+        JT_Precio.setToolTipText("");
+
         CB_Items.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Sombreros", "Gafas", "Bufandas", "Chaqueta", "Pantalon", "Zapatos" }));
 
-        jButton1.setText("Guardar");
+        JB_GuardarItems.setText("Guardar");
+        JB_GuardarItems.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                JB_GuardarItemsMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -140,7 +149,7 @@ public class Main extends javax.swing.JFrame {
                                         .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addGap(0, 0, Short.MAX_VALUE)))
                         .addContainerGap())
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(JB_GuardarItems, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -159,13 +168,13 @@ public class Main extends javax.swing.JFrame {
                         .addGap(51, 51, 51)
                         .addComponent(CB_Items, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(36, 36, 36)
-                        .addComponent(jButton1)))
+                        .addComponent(JB_GuardarItems)))
                 .addContainerGap(27, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Items", jPanel3);
 
-        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+        TB_Casa.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null},
                 {null, null, null, null, null},
@@ -184,13 +193,18 @@ public class Main extends javax.swing.JFrame {
                 return types [columnIndex];
             }
         });
-        jScrollPane2.setViewportView(jTable2);
+        jScrollPane2.setViewportView(TB_Casa);
 
         jLabel7.setText("X");
 
         jLabel8.setText("Y");
 
-        jButton2.setText("Guardar");
+        GuardarCasa.setText("Guardar");
+        GuardarCasa.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                GuardarCasaMouseClicked(evt);
+            }
+        });
 
         jLabel9.setText("Nombre");
 
@@ -228,7 +242,7 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(JT_costo)
-                        .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 147, Short.MAX_VALUE))
+                        .addComponent(GuardarCasa, javax.swing.GroupLayout.DEFAULT_SIZE, 147, Short.MAX_VALUE))
                     .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -256,13 +270,13 @@ public class Main extends javax.swing.JFrame {
                     .addComponent(jLabel7)
                     .addComponent(jLabel8)
                     .addComponent(Jt_Y, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton2))
+                    .addComponent(GuardarCasa))
                 .addGap(0, 13, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Casa", jPanel4);
 
-        jTable3.setModel(new javax.swing.table.DefaultTableModel(
+        TB_Puffles.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
                 {null, null, null},
@@ -281,15 +295,26 @@ public class Main extends javax.swing.JFrame {
                 return types [columnIndex];
             }
         });
-        jScrollPane3.setViewportView(jTable3);
+        jScrollPane3.setViewportView(TB_Puffles);
 
         jLabel12.setText("Nombre");
 
         jLabel13.setText("Color");
 
+        jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton3MouseClicked(evt);
+            }
+        });
+
         jLabel14.setText("Precio");
 
         JB_GuardarP.setText("Guardar");
+        JB_GuardarP.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                JB_GuardarPMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -343,7 +368,7 @@ public class Main extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Puffles", jPanel5);
 
-        jTable4.setModel(new javax.swing.table.DefaultTableModel(
+        TB_Juegos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -362,7 +387,7 @@ public class Main extends javax.swing.JFrame {
                 return types [columnIndex];
             }
         });
-        jScrollPane4.setViewportView(jTable4);
+        jScrollPane4.setViewportView(TB_Juegos);
 
         jLabel15.setText("Nombre");
 
@@ -549,6 +574,90 @@ public class Main extends javax.swing.JFrame {
         }    
     }//GEN-LAST:event_jb_loginMouseClicked
 
+    private void JB_GuardarItemsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JB_GuardarItemsMouseClicked
+        // TODO add your handling code here:
+        TB_Items.setModel(new javax.swing.table.DefaultTableModel(
+                new Object[][]{},
+                new String[]{
+                    "Nombre", "Tipo", "Precio"
+                }
+        ) {
+            Class[] types = new Class[]{
+                java.lang.String.class, java.lang.String.class, java.lang.Integer.class
+            };
+            boolean[] canEdit = new boolean[]{
+                false, false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types[columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit[columnIndex];
+            }
+        });
+        Object[] newrow = {
+                    JT_Nombre.getText(),
+                    CB_Items.getSelectedItem().toString(),
+                    Integer.valueOf(JT_Precio.getText())
+                };   
+        DefaultTableModel modelo
+                        = (DefaultTableModel) TB_Items.getModel();
+                modelo.addRow(newrow);
+                TB_Items.setModel(modelo);
+        JT_Nombre.setText("");
+        JT_Precio.setText("");
+    }//GEN-LAST:event_JB_GuardarItemsMouseClicked
+
+    private void GuardarCasaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_GuardarCasaMouseClicked
+         TB_Casa.setModel(new javax.swing.table.DefaultTableModel(
+                new Object[][]{},
+                new String[]{
+                    "Nombre", "Size", "Costo", "X", "Y"
+                }
+        ) {
+            Class[] types = new Class[]{
+                java.lang.String.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class
+            };
+            boolean[] canEdit = new boolean[]{
+                false, false, false,false,false,false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types[columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit[columnIndex];
+            }
+        });
+        Object[] newrow = {
+                    JT_NombreCasa.getText(),
+                    Integer.valueOf(JT_size.getText()),
+                    Integer.valueOf(JT_costo.getText()),
+                    Integer.valueOf(Jt_X.getText()),
+                    Integer.valueOf(Jt_Y.getText())
+                };   
+        DefaultTableModel modelo
+                        = (DefaultTableModel) TB_Casa.getModel();
+                modelo.addRow(newrow);
+                TB_Casa.setModel(modelo);
+        JT_NombreCasa.setText("");
+        JT_size.setText("");
+        JT_costo.setText("");
+        Jt_X.setText("");
+        Jt_Y.setText("");
+    }//GEN-LAST:event_GuardarCasaMouseClicked
+
+    private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
+        
+    }//GEN-LAST:event_jButton3MouseClicked
+
+    private void JB_GuardarPMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JB_GuardarPMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_JB_GuardarPMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -587,6 +696,8 @@ public class Main extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JFrame Admin;
     private javax.swing.JComboBox<String> CB_Items;
+    private javax.swing.JButton GuardarCasa;
+    private javax.swing.JButton JB_GuardarItems;
     private javax.swing.JButton JB_GuardarP;
     private javax.swing.JTextField JB_precioPuf;
     private javax.swing.JTextField JT_Nombre;
@@ -599,8 +710,10 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JTextField JT_usuario;
     private javax.swing.JTextField Jt_X;
     private javax.swing.JTextField Jt_Y;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JTable TB_Casa;
+    private javax.swing.JTable TB_Items;
+    private javax.swing.JTable TB_Juegos;
+    private javax.swing.JTable TB_Puffles;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
@@ -632,10 +745,6 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JTable jTable2;
-    private javax.swing.JTable jTable3;
-    private javax.swing.JTable jTable4;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
