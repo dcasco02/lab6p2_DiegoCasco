@@ -25,6 +25,14 @@ public class Main extends javax.swing.JFrame {
         String usuario ="p";
         String password="p";
         usuarios.add(new Usuario(usuario, password,true,1000));
+        
+        usuario="james";
+        password="123";
+        usuarios.add(new Usuario(usuario, password, false,1000));
+        
+        usuario="jorge";
+        password="1449";
+        usuarios.add(new Usuario(usuario, password,false,1000));
     }
 
     /**
@@ -842,25 +850,24 @@ public class Main extends javax.swing.JFrame {
 
     private void jb_loginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_loginMouseClicked
         // TODO add your handling code here:
-        if (JT_usuario.getText().equals("p") && JT_password.getText().equals("p")) {
-            Admin.pack();
-            Admin.setLocationRelativeTo(this);
-            Admin.setVisible(true);
-        }
+        
         for (Usuario usuario : usuarios) {
-            if (usuario.getNombre().equals(JT_Nombre.getText())&&usuario.getPassword().equals(JT_password.getText())) {
-                    Menu_Juego.pack();
-                    Menu_Juego.setLocationRelativeTo(this);
-                    Menu_Juego.setVisible(true);
-                } else {
-                    usuarios.add(new Usuario(JT_usuario.getText(), JT_password.getText(), false, 1000));
-                    Menu_Juego.pack();
-                    Menu_Juego.setLocationRelativeTo(this);
-                    Menu_Juego.setVisible(true);
-                }
-        }
-                
-            
+            if (JT_usuario.getText().equals("p") && JT_password.getText().equals("p")) {
+                Admin.pack();
+                Admin.setLocationRelativeTo(this);
+                Admin.setVisible(true);
+            }
+            if (usuario.getNombre().equals(JT_Nombre.getText()) && usuario.getPassword().equals(JT_password.getText())) {
+                Menu_Juego.pack();
+                Menu_Juego.setLocationRelativeTo(this);
+                Menu_Juego.setVisible(true);
+            } else {
+                usuarios.add(new Usuario(JT_usuario.getText(), JT_password.getText(), false, 1000));
+                Menu_Juego.pack();
+                Menu_Juego.setLocationRelativeTo(this);
+                Menu_Juego.setVisible(true);
+            }
+        }         
     }//GEN-LAST:event_jb_loginMouseClicked
 
     private void JB_GuardarItemsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JB_GuardarItemsMouseClicked
